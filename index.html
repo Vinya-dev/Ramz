@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A/R Демонтаж — Профессиональный демонтаж в Казани</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo-block">
+                <div class="logo-iconmain">
+                    <img src="logo.png" alt="Логотип">
+                </div>
+                <div class="logo-info">
+                    <div class="logo-text">A/R Демонтаж</div>
+                    <div class="logo-subtext">Профессиональный демонтаж в Казани</div>
+                </div>
+            </div>
+            
+            <div class="contacts-block">
+                <a href="tel:+79934069281" class="phone-link">+7 (993) 406-92-81</a>
+                <div class="phone-subtext">Быстрая связь</div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Главный экран -->
+        <section class="main-hero">
+            <div class="container">
+                <span class="badge">Онлайн-калькулятор</span>
+                <h1>Рассчитайте стоимость демонтажа квартиры <span class="highlight">за 2 минуты</span></h1>
+                <p class="hero-desc">Укажите площадь, выберите необходимые услуги и желаемые сроки. Расчет стоимости производится мгновенно.</p>
+                
+                <!-- Сетка калькулятора -->
+                <div class="calculator-grid">
+                    <!-- Левая часть: Параметры -->
+                    <div class="calc-inputs">
+                        
+                        <!-- Площадь -->
+                        <div class="calc-section">
+                            <div class="section-title">
+                                <span class="icon"><img src="notebook.png" alt="Иконка"></span>
+                                <span>Площадь квартиры</span>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="number" id="area-input" value="60">
+                                <span class="unit">м²</span>
+                            </div>
+                            <span class="hint">Например: 45, 60, 80...</span>
+                        </div>
+
+                        <!-- Услуги -->
+                        <div class="calc-section">
+                            <div class="section-title">
+                                <span class="icon"><img src="instruments.png" alt="Иконка"></span>
+                                <span>Что нужно демонтировать</span>
+                            </div>
+                            <div class="checkbox-grid">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" class="service-checkbox" value="2000" checked>
+                                    <span>Демонтаж стен (2 000 ₽)</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" class="service-checkbox" value="700">
+                                    <span>Демонтаж штукатурки (700 ₽)</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" class="service-checkbox" value="1200">
+                                    <span>Демонтаж пола (1 200 ₽)</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" class="service-checkbox" value="1500">
+                                    <span>Демонтаж потолка (1 500 ₽)</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" class="service-checkbox" value="1800">
+                                    <span>Демонтаж перегородок (1 800 ₽)</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" class="service-checkbox" value="2500">
+                                    <span>Демонтаж сантехкабины (2 500 ₽)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Сроки -->
+                        <div class="calc-section">
+                            <div class="section-title">
+                                <span class="icon"><img src="kalendar.png" alt="Иконка"></span>
+                                <span>Сроки выполнения</span>
+                            </div>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="term" value="1.5" checked>
+                                    <span>2–3 дня</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="term" value="1.2">
+                                    <span>3–6 дней</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="term" value="1.0">
+                                    <span>6–10 дней</span>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Правая часть: Результат -->
+                    <div class="calc-result-box">
+                        <div class="result-title">Примерная стоимость</div>
+                        <div class="result-price" id="total-price">180 000 ₽</div>
+                        <div class="result-term" id="selected-term">
+                            <img src="kalendar.png" alt="Срок"> Срок: 2–3 дня
+                        </div>
+                        <a href="#" class="btn-primary">Позвонить специалисту →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Преимущества -->
+        <section class="container">
+            <div class="advantages">
+                <div class="adv-card">
+                    <div class="adv-icon"><img src="storm.png" alt="Иконка"></div>
+                    <h3>Быстро</h3>
+                    <p>Точный расчет стоимости на сайте. Оперативный выезд на замер объекта.</p>
+                </div>
+                <div class="adv-card">
+                    <div class="adv-icon"><img src="shit.png" alt="Иконка"></div>
+                    <h3>Безопасно</h3>
+                    <p>Строго соблюдаем технику безопасности, строительные нормы и правила.</p>
+                </div>
+                <div class="adv-card">
+                    <div class="adv-icon"><img src="diamond.png" alt="Иконка"></div>
+                    <h3>Честная цена</h3>
+                    <p>Фиксированная стоимость работ без скрытых наценок и доплат.</p>
+                </div>
+                <div class="adv-card">
+                    <div class="adv-icon"><img src="power.png" alt="Иконка"></div>
+                    <h3>Мастера</h3>
+                    <p>Профессионально работаем с любыми типами жилых и коммерческих помещений.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Как это работает -->
+        <section class="container how-it-works">
+            <h2>Этапы сотрудничества</h2>
+            <div class="steps-title">Всего 3 простых шага</div>
+            
+            <div class="steps-grid">
+                <div class="step-item">
+                    <div class="step-num">1</div>
+                    <h4>Рассчитайте стоимость</h4>
+                    <p>Укажите квадратуру квартиры и выберите необходимые виды демонтажа.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">2</div>
+                    <h4>Свяжитесь для деталей</h4>
+                    <p>Позвоните нам для финального согласования перечня работ и даты выезда.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">3</div>
+                    <h4>Приступаем к работе</h4>
+                    <p>Приезжаем на объект со своим инструментом и выполняем работу в срок.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <div class="footer-logo-block">
+                    <div class="logo-iconmain">
+                        <img src="logo.png" alt="Логотип">
+                    </div>
+                    <div class="logo-info">
+                        <div class="logo-text">A/R Демонтаж</div>
+                        <div class="logo-subtext">Профессиональный демонтаж в Казани</div>
+                    </div>
+                </div>
+                <div class="footer-copy">Быстро. Чисто. Профессионально.</div>
+            </div>
+            
+            <div class="footer-right">
+                <a href="tel:+79934069281" class="footer-phone">+7 (993) 406-92-81</a>
+                <div class="social-text">Свяжитесь напрямую: Звонки / WhatsApp / Telegram (Рамазан)</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,528 @@
+/* Общие стили и сброс */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+}
+
+body {
+    background-color: #F7F4EF; /* Мягкий светлый цвет кофейной пены для всего фона */
+    color: #2D3748; /* Глубокий темный текст для идеальной читаемости на светлом фоне */
+    font-size: 16px; /* Базовый размер текста */
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================
+   Шапка сайта (Header)
+   ========================================== */
+.header {
+    background-color: #17212B; /* Благородный темный графит для верхней линии */
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(197, 139, 69, 0.2); /* Аккуратная бронзовая граница */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-block, .footer-logo-block {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Ограничиваем размеры логотипов в шапке */
+.logo-iconmain img {
+    height: 120px;
+    width: auto;
+    max-width: 150px;
+    object-fit: contain;
+    display: block;
+}
+
+.logo-icon img {
+    height: 32px;
+    width: auto;
+    max-width: 100px;
+    object-fit: contain;
+    display: block;
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 21px; 
+    color: #ffffff; /* Белый текст для контраста в шапке */
+    letter-spacing: -0.5px;
+}
+
+.logo-subtext {
+    font-size: 13px; 
+    color: #C58B45; /* Бронзовый акцент */
+    margin-top: 1px;
+}
+
+.contacts-block {
+    text-align: right;
+}
+
+.phone-link {
+    font-weight: 700;
+    font-size: 20px; 
+    color: #ffffff; /* Белый текст для контраста в шапке */
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.phone-link:hover {
+    color: #C58B45;
+}
+
+.phone-subtext {
+    font-size: 13px;
+    color: #94a3b8; /* Светло-серый подтекст */
+    margin-top: 1px;
+}
+
+/* ==========================================
+   Главный экран и Калькулятор (Main Hero)
+   ========================================== */
+.main-hero {
+    padding: 40px 0 60px 0;
+    background: transparent; 
+}
+
+.badge {
+    font-size: 12px; 
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #C58B45;
+    display: inline-block;
+    background: rgba(197, 139, 69, 0.1); 
+    padding: 5px 12px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: 40px; 
+    font-weight: 800;
+    max-width: 750px;
+    line-height: 1.25;
+    margin-bottom: 16px;
+    color: #1A202C; 
+}
+
+.highlight {
+    color: #C58B45;
+}
+
+.hero-desc {
+    color: #4A5568;
+    font-size: 17px; 
+    max-width: 650px;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+/* Сетка калькулятора */
+.calculator-grid {
+    display: grid;
+    grid-template-columns: 2fr 1.2fr; /* Правый блок стал шире */
+    gap: 30px;
+    background: #ffffff; 
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05); 
+    border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+@media (max-width: 912px) {
+    .calculator-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.calc-section {
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.08); 
+}
+
+.calc-section:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 22px; 
+    margin-bottom: 16px;
+    color: #1A202C;
+}
+
+/* Фильтр для приведения иконок к благородному кофейно-бронзовому цвету */
+.section-title .icon img,
+.adv-icon img {
+    height: 34px;
+    width: auto;
+    max-width: 45px;
+    object-fit: contain;
+    margin-bottom: 12px;
+    filter: brightness(0) saturate(100%) invert(56%) sepia(51%) saturate(543%) hue-rotate(345deg) brightness(88%) contrast(85%);
+}
+
+.section-title .icon img {
+    height: 24px;
+    margin-bottom: 0;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.input-wrapper {
+    position: relative;
+    max-width: 180px; 
+}
+
+#area-input {
+    width: 100%;
+    padding: 12px 45px 12px 14px;
+    font-size: 18px; 
+    background-color: #F7F4EF; 
+    border: 2px solid rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    font-weight: 600;
+    color: #1A202C;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#area-input:focus {
+    border-color: #C58B45;
+}
+
+.unit {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #718096;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.hint {
+    font-size: 13px; 
+    color: #A0AEC0;
+    display: block;
+    margin-top: 6px;
+}
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+@media (max-width: 576px) {
+    .checkbox-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.checkbox-label, .radio-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px; 
+    color: #4A5568;
+    cursor: pointer;
+    user-select: none;
+    line-height: 1.4;
+}
+
+.checkbox-label input, .radio-label input {
+    width: 18px; 
+    height: 18px;
+    accent-color: #C58B45;
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+/* ==========================================
+   Блок результата (Широкий темный стакан)
+   ========================================== */
+.calc-result-box {
+    background-color: #1E252B; 
+    border: 1px solid rgba(197, 139, 69, 0.3);
+    padding: 30px 24px; 
+    border-radius: 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: 100%; 
+    align-self: start;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.result-title {
+    font-size: 14px; 
+    font-weight: 600;
+    color: #A0AEC0;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 10px;
+}
+
+.result-price {
+    font-size: 38px; 
+    font-weight: 800;
+    color: #C58B45;
+    margin-bottom: 10px;
+}
+
+.result-term {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 14px; 
+    font-weight: 600;
+    color: #ffffff;
+    background: rgba(197, 139, 69, 0.15);
+    border: 1px solid rgba(197, 139, 69, 0.2);
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 22px;
+}
+
+.result-term img {
+    height: 18px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(56%) sepia(51%) saturate(543%) hue-rotate(345deg) brightness(88%) contrast(85%);
+}
+
+/* Главная кнопка действия */
+.btn-primary {
+    background-color: #C58B45;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 16px 24px; 
+    font-size: 15px; 
+    font-weight: 700;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(197, 139, 69, 0.25);
+}
+
+.btn-primary:hover {
+    background-color: #b07a3b;
+    box-shadow: 0 6px 24px rgba(197, 139, 69, 0.35);
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+/* ==========================================
+   Блок преимуществ (Advantages)
+   ========================================== */
+.advantages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.adv-card {
+    background: #ffffff; 
+    padding: 26px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
+    transition: border-color 0.3s;
+}
+
+.adv-card:hover {
+    border-color: rgba(197, 139, 69, 0.2);
+}
+
+.adv-card h3 {
+    font-size: 21px; 
+    font-weight: 700;
+    color: #1A202C;
+    margin-bottom: 10px;
+}
+
+.adv-card p {
+    font-size: 15px; 
+    color: #4A5568;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   Блок "Как это работает" (How it works)
+   ========================================== */
+.how-it-works {
+    padding: 20px 20px 50px;
+}
+
+.how-it-works h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #C58B45;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.steps-title {
+    font-size: 32px; 
+    font-weight: 800;
+    color: #1A202C;
+    margin-bottom: 35px;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+@media (max-width: 768px) {
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.step-item {
+    background: #ffffff; 
+    padding: 28px 22px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.step-num {
+    width: 30px;
+    height: 30px;
+    background-color: #C58B45;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.step-item h4 {
+    font-size: 18px; 
+    font-weight: 700;
+    color: #1A202C;
+    margin-bottom: 10px;
+}
+
+.step-item p {
+    font-size: 15px; 
+    color: #4A5568;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   Подвал сайта (Footer) — ЛОГОТИП СТАЛ БОЛЬШЕ
+   ========================================== */
+.footer {
+    background-color: #11161B; 
+    color: #ffffff;
+    padding: 35px 0;
+    border-top: 4px solid #C58B45;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .footer-logo-block {
+        justify-content: center;
+    }
+}
+
+/* Увеличили размеры изображения логотипа в футере */
+.footer-logo-block img {
+    height: 90px;          /* Сделали выше */
+    width: auto;
+    max-width: 220px;      /* Расширили границы */
+    object-fit: contain;
+    display: block;
+}
+
+.footer-logo-block .logo-text {
+color: #ffffff;
+font-size: 21px;
+}
+.footer-logo-block .logo-subtext {
+color: #C58B45;
+font-size: 13px;
+}
+.footer-copy {
+color: #64748b;
+font-size: 14px;
+margin-top: 10px;
+}
+.footer-right {
+text-align: right;
+}
+@media (max-width: 768px) {
+.footer-right {
+text-align: center;
+}
+}
+.footer-phone {
+font-size: 23px;
+font-weight: 700;
+color: #ffffff;
+text-decoration: none;
+transition: color 0.2s;
+}
+.footer-phone:hover {
+color: #C58B45;
+}
+.social-text {
+font-size: 14px;
+color: #94a3b8;
+margin-top: 4px;
+}
